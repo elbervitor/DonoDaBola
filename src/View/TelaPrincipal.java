@@ -55,7 +55,7 @@ public class TelaPrincipal extends JFrame implements ItemListener{
 
 	@Override
 	public void itemStateChanged(ItemEvent e) {
-		System.out.println("Funcionou!!!");
+		System.out.println("Agora funcionará o github");
 		
 	}
 
