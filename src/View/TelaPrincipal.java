@@ -1,62 +1,25 @@
 package View;
 
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.ItemEvent;
-import java.awt.event.ItemListener;
-import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
-import java.awt.event.MouseListener;
-
-import javax.swing.JButton;
+import javax.swing.JDesktopPane;
 import javax.swing.JFrame;
-import javax.swing.JMenu;
-import javax.swing.JMenuBar;
-import javax.swing.JMenuItem;
 
-public class TelaPrincipal extends JFrame implements ItemListener{
-
+public class TelaPrincipal extends JFrame{
+	
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	JDesktopPane desktop = new JDesktopPane();
 	
 	public TelaPrincipal() {
+		setSize(700,600);
+		setLocationRelativeTo(null);
+		setTitle("Dono Da Bola");
+		setDefaultCloseOperation(EXIT_ON_CLOSE);		
 		
-		setTitle("Nome do programa!");
-		setBounds(0,0,1000,700);
+		getContentPane().setLayout(null);
+		getContentPane().add(new TelaCadastroUsuario());
 		
-		setDefaultCloseOperation(EXIT_ON_CLOSE);
-		
-		setJMenuBar(menuPrincipal());
-		
-		JButton bt = new JButton();
-		bt.setBounds(50,50,10,50);
-		bt.setText("teste");
-		
-		getContentPane().add(bt);
-			
 		setVisible(true);
 	}
-	
-	private JMenuBar menuPrincipal() {
-		
-		JMenuBar menu = new JMenuBar();
-		
-		JMenuItem cadastrar = new JMenuItem("Cadastrar");
-		JMenu usuario = new JMenu("Usuário");
-		usuario.add(cadastrar);
-		usuario.addItemListener(this);
-		
-		menu.add(usuario);
-		return menu;
-		
-	}
-
-	@Override
-	public void itemStateChanged(ItemEvent e) {
-		System.out.println("Agora funcionará o github");
-		
-	}
-
 }

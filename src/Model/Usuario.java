@@ -12,8 +12,6 @@ public abstract class Usuario {
 		setTelefone(telefone);
 	}
 	
-	// METODOS ACESSORES
-
 	public String getNome() {
 		return nome;
 	}
