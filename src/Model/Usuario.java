@@ -5,6 +5,7 @@ public abstract class Usuario {
 	private String nome;
 	private String email;
 	private String telefone;
+	private Avaliacao notaGeral;
 	
 	public Usuario(String nome, String email, String telefone) {
 		setNome(nome);
@@ -12,6 +13,12 @@ public abstract class Usuario {
 		setTelefone(telefone);
 	}
 	
+	public void avaliar(double nota) {
+		notaGeral.avaliar(nota);
+	}
+	
+	// METODOS ACESSORES
+
 	public String getNome() {
 		return nome;
 	}
