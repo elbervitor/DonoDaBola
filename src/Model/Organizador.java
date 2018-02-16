@@ -2,7 +2,6 @@ package Model;
 
 public class Organizador extends Usuario{
 	private double qtdContratos = 0;
-	private double porcentoRecomenda = 0;
 	//@override
 	private AvaliacaoOrganizador notaGeral;
 	
@@ -14,6 +13,10 @@ public class Organizador extends Usuario{
 	public void avaliar (boolean nota) {
 		notaGeral.avaliar(nota);
 	}
+	
+	public void addContratos() {
+		qtdContratos++;
+	}
 
 	// Gets and Sets...
 	public double getQtdContratos() {
@@ -24,16 +27,8 @@ public class Organizador extends Usuario{
 		this.qtdContratos = qtdContratos;
 	}
 
-	public double getPorcentoRecomenda() {
-		return porcentoRecomenda;
-	}
-
-	public void setPorcentoRecomenda(double porcentoRecomenda) {
-		this.porcentoRecomenda = porcentoRecomenda;
-	}
-
-	public AvaliacaoOrganizador getNotaGeral() {
-		return notaGeral;
+	public double getNotaGeral() {
+		return notaGeral.getQtdAvaliacao();
 	}
 
 	public void setNotaGeral(AvaliacaoOrganizador notaGeral) {
